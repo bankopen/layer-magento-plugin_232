@@ -450,7 +450,7 @@ class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod
 
         return array(                       
             'Content-Type: application/json',                                 
-            'Authorization: Bearer '.$this->_accesskey.':'.$token,
+            'Authorization: Bearer '.$this->_accesskey.':'.$this->_secretkey,
             'X-O-Timestamp: '.$time_stamp
         );
 
