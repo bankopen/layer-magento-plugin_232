@@ -243,7 +243,7 @@ class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod
 							function (response) {
 								console.log(response)
 								if(response !== null || response.length > 0 ){
-									if(response.payment_id !== undefined  ){
+									if(response.payment_id !== undefined || response.payment_id !== '' || response.payment_id != null ){
 										document.getElementById('layer_payment_id').value = response.payment_id;
 									}
 								}
